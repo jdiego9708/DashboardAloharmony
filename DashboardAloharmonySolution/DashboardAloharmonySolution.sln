@@ -1,0 +1,57 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33530.505
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DashboardAloha.API", "DashboardAloha.API\DashboardAloha.API.csproj", "{59679E23-490A-4B19-8632-F44C25F272A0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DataAccess", "DataAccess", "{1C7C90E6-8B63-4621-AF7A-395806A7FBA2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{23906A4E-B0E3-4D9F-BF90-D47CD6AC04B9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Entities", "Entities", "{A95D5D59-0BD8-424B-920E-9BE66296547B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentation", "{FD383B83-1102-4404-950E-B7B340622DD7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DasboardAloha.Entities", "DasboardAloha.Entities\DasboardAloha.Entities.csproj", "{1AD7C0F7-ABDE-46B0-8C4B-1E309D611DE5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DashboardAloha.DataAccess", "DashboardAloha.DataAccess\DashboardAloha.DataAccess.csproj", "{237055DA-8762-4617-9C65-D97448F0D6E7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DashboardAloha.Services", "DashboardAloha.Services\DashboardAloha.Services.csproj", "{12F11309-2BD3-4F11-BF90-BF394F1D8181}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{59679E23-490A-4B19-8632-F44C25F272A0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{59679E23-490A-4B19-8632-F44C25F272A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{59679E23-490A-4B19-8632-F44C25F272A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{59679E23-490A-4B19-8632-F44C25F272A0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1AD7C0F7-ABDE-46B0-8C4B-1E309D611DE5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1AD7C0F7-ABDE-46B0-8C4B-1E309D611DE5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1AD7C0F7-ABDE-46B0-8C4B-1E309D611DE5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1AD7C0F7-ABDE-46B0-8C4B-1E309D611DE5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{237055DA-8762-4617-9C65-D97448F0D6E7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{237055DA-8762-4617-9C65-D97448F0D6E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{237055DA-8762-4617-9C65-D97448F0D6E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{237055DA-8762-4617-9C65-D97448F0D6E7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{12F11309-2BD3-4F11-BF90-BF394F1D8181}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{12F11309-2BD3-4F11-BF90-BF394F1D8181}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{12F11309-2BD3-4F11-BF90-BF394F1D8181}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{12F11309-2BD3-4F11-BF90-BF394F1D8181}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{59679E23-490A-4B19-8632-F44C25F272A0} = {FD383B83-1102-4404-950E-B7B340622DD7}
+		{1AD7C0F7-ABDE-46B0-8C4B-1E309D611DE5} = {A95D5D59-0BD8-424B-920E-9BE66296547B}
+		{237055DA-8762-4617-9C65-D97448F0D6E7} = {1C7C90E6-8B63-4621-AF7A-395806A7FBA2}
+		{12F11309-2BD3-4F11-BF90-BF394F1D8181} = {23906A4E-B0E3-4D9F-BF90-D47CD6AC04B9}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2B59F242-5116-4CFC-A0A5-EC5210572574}
+	EndGlobalSection
+EndGlobal
