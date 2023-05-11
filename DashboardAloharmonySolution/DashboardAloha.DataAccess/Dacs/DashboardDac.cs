@@ -38,7 +38,7 @@ namespace DashboardAloha.DataAccess.Dacs
         {
             try
             {
-                var client = new MongoClient(this.ConnectionDac.Cn());
+                var client = new MongoClient(this.ConnectionDac.CnMongo());
                 var database = client.GetDatabase(this.ConfigurationDashboardAPI.NameBDDefault);
 
                 IMongoCollection<BsonDocument> collection = database.GetCollection<BsonDocument>("user");
@@ -64,7 +64,7 @@ namespace DashboardAloha.DataAccess.Dacs
         {
             try
             {
-                var client = new MongoClient(this.ConnectionDac.Cn());
+                var client = new MongoClient(this.ConnectionDac.CnMongo());
                 var database = client.GetDatabase(this.ConfigurationDashboardAPI.NameBDDefault);
 
                 IMongoCollection<BsonDocument> collection = database.GetCollection<BsonDocument>("user");
@@ -174,7 +174,7 @@ namespace DashboardAloha.DataAccess.Dacs
         {
             try
             {
-                var client = new MongoClient(this.ConnectionDac.Cn());
+                var client = new MongoClient(this.ConnectionDac.CnMongo());
                 var database = client.GetDatabase(this.ConfigurationDashboardAPI.NameBDDefault);
 
                 IMongoCollection<BsonDocument> collection = database.GetCollection<BsonDocument>("user");
@@ -195,7 +195,7 @@ namespace DashboardAloha.DataAccess.Dacs
         {
             try
             {
-                var client = new MongoClient(this.ConnectionDac.Cn());
+                var client = new MongoClient(this.ConnectionDac.CnMongo());
                 var database = client.GetDatabase(this.ConfigurationDashboardAPI.NameBDDefault);
 
                 IMongoCollection<BsonDocument> collection = database.GetCollection<BsonDocument>("historytrack");
@@ -216,7 +216,7 @@ namespace DashboardAloha.DataAccess.Dacs
         {
             try
             {
-                var client = new MongoClient(this.ConnectionDac.Cn());
+                var client = new MongoClient(this.ConnectionDac.CnMongo());
                 var database = client.GetDatabase(this.ConfigurationDashboardAPI.NameBDDefault);
 
                 IMongoCollection<BsonDocument> collection = database.GetCollection<BsonDocument>("historyviews");
@@ -237,7 +237,7 @@ namespace DashboardAloha.DataAccess.Dacs
         {
             try
             {
-                var client = new MongoClient(this.ConnectionDac.Cn());
+                var client = new MongoClient(this.ConnectionDac.CnMongo());
                 var database = client.GetDatabase(this.ConfigurationDashboardAPI.NameBDDefault);
 
                 IMongoCollection<BsonDocument> collection = database.GetCollection<BsonDocument>("types");
@@ -254,7 +254,27 @@ namespace DashboardAloha.DataAccess.Dacs
                 return Task.FromResult(new List<TypeMusicModel>());
             }
         }
+        public Task<List<HistoryPaymentModel>> LoadHistoryPaymentCollection()
+        {
+            try
+            {
+                var client = new MongoClient(this.ConnectionDac.CnMongo());
+                var database = client.GetDatabase(this.ConfigurationDashboardAPI.NameBDDefault);
 
+                IMongoCollection<BsonDocument> collection = database.GetCollection<BsonDocument>("historypayment");
+
+                var results = collection.Find(new BsonDocument()).ToList();
+
+                List<HistoryPaymentModel> historyCollectionList = results.Select(bsonDocument =>
+                    BsonSerializer.Deserialize<HistoryPaymentModel>(bsonDocument)).ToList();
+
+                return Task.FromResult(historyCollectionList);
+            }
+            catch (Exception)
+            {
+                return Task.FromResult(new List<HistoryPaymentModel>());
+            }
+        }
         public class UserProfileCount
         {
             public UserProfileCount()

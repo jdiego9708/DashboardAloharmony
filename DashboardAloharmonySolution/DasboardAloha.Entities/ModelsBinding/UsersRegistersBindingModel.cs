@@ -6,6 +6,9 @@
         {
             
         }
+        public int Id_users_registers { get; set; }
+        public DateTime Date_sync_users { get; set; }
+        public TimeSpan Hour_sync_users { get; set; }
         public int Count_users_registers { get; set; }
         public int Count_users_registers_free { get; set; }
         public int Count_users_registers_courtesy { get; set; }

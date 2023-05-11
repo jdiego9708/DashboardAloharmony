@@ -8,7 +8,8 @@ namespace DasboardAloha.Entities.Models
     {
         public UserModel()
         {
-            
+            TypesMusicUserModel = new();
+            Payments = new();
 
             this.Email = string.Empty;
             this.Phone = string.Empty;
@@ -48,9 +49,8 @@ namespace DasboardAloha.Entities.Models
             this.LastName = string.Empty;
         }
 
-        public List<TypeMusicUserModel> TypesMusicUserModel { get; set; }
         public decimal Total_time_elapsed { get; set; }
-        public List<HistoryTrackModel> HistoryTracks { get; set; }
+        public bool IsDeserted { get; set; }
 
         [BsonId]
         [BsonElement("_id")]
@@ -175,5 +175,9 @@ namespace DasboardAloha.Entities.Models
 
         [BsonElement("lastName")]
         public object LastName { get; set; }
+
+        public List<TypeMusicUserModel> TypesMusicUserModel { get; set; }        
+        public List<HistoryTrackModel> HistoryTracks { get; set; }
+        public List<HistoryPaymentModel> Payments { get; set; }
     }
 }

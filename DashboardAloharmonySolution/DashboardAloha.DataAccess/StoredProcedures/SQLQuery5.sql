@@ -1,0 +1,5 @@
+CREATE OR ALTER PROC sp_Users_d_all
+AS
+BEGIN
+	DELETE FROM Users
+END

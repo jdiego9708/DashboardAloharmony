@@ -10,6 +10,7 @@ namespace DashboardAloha.DataAccess.Interfaces
         Task<string> GetCountUsersActive();
         Task<List<UserModel>> GetAllUsersRegisters();
         Task<List<UserModel>> LoadUsersCollection();
+        Task<List<HistoryPaymentModel>> LoadHistoryPaymentCollection();
         Task<List<HistoryTrackModel>> LoadHistoryTracksCollection();
         Task<List<HistoryViewModel>> LoadHistoryViewsCollection();
     }

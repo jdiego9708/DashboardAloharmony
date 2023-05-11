@@ -17,7 +17,7 @@ namespace DashboardAloha.DataAccess.Dacs
             this.ConnectionStrings = settings.Get<ConnectionStringsModel>();
         }
 
-        public string Cn()
+        public string CnMongo()
         {
             if (this.ConfigurationDashboardAPI.IsProduction)
             {
@@ -26,6 +26,17 @@ namespace DashboardAloha.DataAccess.Dacs
             else
             {
                 return this.ConnectionStrings.MongoDBDev;
+            }
+        }
+        public string CnSQL()
+        {
+            if (this.ConfigurationDashboardAPI.IsProduction)
+            {
+                return this.ConnectionStrings.SQLAlohaDashboardDBProd;
+            }
+            else
+            {
+                return this.ConnectionStrings.SQLAlohaDashboardDBDev;
             }
         }
     }

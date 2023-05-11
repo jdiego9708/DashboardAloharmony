@@ -18,6 +18,90 @@ namespace DashboardAloha.API.Controllers
         }
 
         [HttpGet]
+        [Route("GetListUsersActives")]
+        public async Task<IActionResult> GetListUsersActives()
+        {
+            try
+            {
+                logger.LogInformation("Inicio GetListUsersActives");
+
+                ResponseServiceModel response = await this.DashboardService.GetListUsersActives();
+                if (response.IsSuccess)
+                {
+                    logger.LogInformation($"GetListUsersActives correcto");
+                    return Ok(response.Response);
+                }
+                else
+                {
+                    logger.LogInformation($"GetListUsersActives sin resultados");
+                    return BadRequest(response.Response);
+                }
+
+            }
+            catch (Exception ex)
+            {
+                logger.LogError("Error GetListUsersActives", ex);
+                return BadRequest(ex.Message);
+            }
+        }
+
+        [HttpGet]
+        [Route("GetTotalSalesDashboard")]
+        public async Task<IActionResult> GetTotalSalesDashboard()
+        {
+            try
+            {
+                logger.LogInformation("Inicio GetTotalSalesDashboard");
+
+                ResponseServiceModel response = await this.DashboardService.GetTotalSalesDashboard();
+                if (response.IsSuccess)
+                {
+                    logger.LogInformation($"GetTotalSalesDashboard correcto");
+                    return Ok(response.Response);
+                }
+                else
+                {
+                    logger.LogInformation($"GetTotalSalesDashboard sin resultados");
+                    return BadRequest(response.Response);
+                }
+
+            }
+            catch (Exception ex)
+            {
+                logger.LogError("Error GetTotalSalesDashboard", ex);
+                return BadRequest(ex.Message);
+            }
+        }
+
+        [HttpGet]
+        [Route("GetUsersDesertersDashboard")]
+        public async Task<IActionResult> GetUsersDesertersDashboard()
+        {
+            try
+            {
+                logger.LogInformation("Inicio GetUsersDesertersDashboard");
+
+                ResponseServiceModel response = await this.DashboardService.GetUsersDesertersDashboard();
+                if (response.IsSuccess)
+                {
+                    logger.LogInformation($"GetUsersDesertersDashboard correcto");
+                    return Ok(response.Response);
+                }
+                else
+                {
+                    logger.LogInformation($"GetUsersDesertersDashboard sin resultados");
+                    return BadRequest(response.Response);
+                }
+
+            }
+            catch (Exception ex)
+            {
+                logger.LogError("Error GetUsersDesertersDashboard", ex);
+                return BadRequest(ex.Message);
+            }
+        }
+
+        [HttpGet]
         [Route("GetUsersXContentDashboard")]
         public async Task<IActionResult> GetUsersXContentDashboard()
         {

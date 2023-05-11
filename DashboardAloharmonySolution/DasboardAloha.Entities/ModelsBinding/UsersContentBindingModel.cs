@@ -6,7 +6,9 @@
         {
             this.Type_content = string.Empty;
         }
-
+        public int Id_users_content { get; set; }
+        public DateTime Date_sync_users { get; set; }
+        public TimeSpan Hour_sync_users { get; set; }
         public string Type_content { get; set; }
         public int Total_users_active { get; set; }
         public int Count_users_active_content { get; set; }

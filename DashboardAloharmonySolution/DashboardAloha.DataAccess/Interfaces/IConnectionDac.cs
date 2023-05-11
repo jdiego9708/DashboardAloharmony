@@ -2,6 +2,7 @@
 {
     public interface IConnectionDac
     {
-        string Cn();
+        string CnSQL();
+        string CnMongo();
     }
 }
